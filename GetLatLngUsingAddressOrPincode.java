@@ -27,7 +27,7 @@ public class GetLatLngUsingAddressOrPincode
   public static String[] getLatLongPositions(String address) throws Exception
   {
     int responseCode = 0;
-    String api = "http://maps.googleapis.com/maps/api/geocode/xml?address=" + URLEncoder.encode(address, "UTF-8") + "&sensor=true";
+    String api = "https://maps.googleapis.com/maps/api/geocode/xml?address=" + URLEncoder.encode(address, "UTF-8") +"&key=YOUR_API_KEY"+"&sensor=true";
     URL url = new URL(api);
     HttpURLConnection httpConnection = (HttpURLConnection)url.openConnection();
     httpConnection.connect();
